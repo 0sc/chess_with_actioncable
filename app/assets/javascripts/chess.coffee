@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on "turbolinks:load", ->
   App.chess = new Chess()
-  cfg =
+  config =
     draggable: true
     pieceTheme: "assets/chesspieces/wikipedia/{piece}.png"
     showNotation: false
@@ -29,4 +29,4 @@ $(document).on "turbolinks:load", ->
         App.game.perform("make_move", move)
         App.board.position(App.chess.fen(), false)
 
-  App.board = ChessBoard("chessboard", cfg)
+  App.board = ChessBoard("chessboard", config)
